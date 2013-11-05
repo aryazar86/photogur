@@ -2,7 +2,20 @@
 
 <%= link_to "New Picture", "/pictures/new" %>
 
+<br><br>
+
+<table width="100%"><tbody><tr>
+  <% c = 0 %>
+
 <% @pictures.each do |picture| %>
-  <p><%= picture[:title] %>, <%= picture[:artist] %></p>
-  <img src="<%= picture[:url] %>">
-<% end %>   
+  <% if c == 3 %>
+    </td></tr><tr>
+    <% c = 1 %>
+  <% else %>
+    <% c += 1 %>
+  <% end %>
+  <td>
+  <%= link_to picture.title, picture_path(picture[:id]) %> by <%= picture[:artist] %></p>
+  <a href= "<%=picture_path(picture[:id])%>"> <img width="300px" src="<%= picture[:url] %>"></a>
+  </td>
+<% end %>
