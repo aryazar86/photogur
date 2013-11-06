@@ -11,3 +11,57 @@
  *= require_self
  *= require_tree .
  */
+
+div, a {
+    font-family: Verdana, Geneva, sans-serif;
+
+}
+ul {
+    list-style: none;
+}
+
+.linkages {
+    margin: auto;
+}
+
+.title_screen {
+    text-align: center;
+    font-size: 36px;
+}
+
+.ch-grid {
+    margin: auto;
+    list-style: none;
+    text-align: center;
+    width: 75%;
+}
+ 
+.ch-grid:after,
+.ch-item:before {
+    display: table;
+}
+ 
+.ch-grid:after {
+    clear: both;
+}
+
+.ch-grid li {
+    margin: 10px;
+}
+
+.display_imgs {
+    width: 100%;
+}
+
+.imgs_container {
+    border-style:solid;
+    vertical-align: text-top;
+    width: 300px;
+    height: 300px;
+    margin: 3px;
+    display: inline-block;
+}
+
+.main_image {
+    width: 500px;
+}

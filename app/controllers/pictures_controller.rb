@@ -13,13 +13,11 @@ class PicturesController < ApplicationController
   end
 
   def create
-    # make a new picture with what picture_params returns (which is a method we're calling)
+
     @picture = Picture.new(picture_params)
     
     if @picture.save
-      # if the save for the picture was successful, go to index.html.erb
-
-    redirect_to "/pictures/#{@picture.id}"    
+      redirect_to "/pictures/#{@picture.id}"    
     else
       render :new
     end

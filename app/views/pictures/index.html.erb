@@ -1,18 +1,10 @@
-<h1>Welcome to Photogur!</h1>
+<div class="title_screen">Welcome to Photogur!</div>
 
-<%= link_to "New Picture", "/pictures/new" %>
+<p align="center"><%= link_to "Add a New Picture?", "/pictures/new" %></p>
 
 <br><br>
-
-<% c = 0 %>
-<!-- <div class="container">
- --><ul class="ch-grid">
+  <ul class="ch-grid">
     <% @pictures.each do |picture| %>
-      <% if c == 3 %>
-        <% c = 1 %>
-      <% else %>
-        <% c += 1 %>
-      <% end %>
         <div class="imgs_container"><li>
         <%= link_to picture_path(picture[:id]) do %>
           <%= image_tag picture[:url], class: "display_imgs" %>
@@ -21,5 +13,3 @@
       </li></div>
     <% end %>
   </ul>
-<!-- </div>
- -->
