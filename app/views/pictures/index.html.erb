@@ -5,10 +5,10 @@
 <br><br>
   <ul class="ch-grid">
     <% @pictures.each do |picture| %>
-        <div class="imgs_container"><li>
-        <%= link_to picture_path(picture[:id]) do %>
+        <div class="container"><li>
+        <div class="img_container"><%= link_to picture_path(picture[:id]) do %>
           <%= image_tag picture[:url], class: "display_imgs" %>
-        <% end %>
+        <% end %></div>
          <p class="title"><%= link_to picture.title, picture_path(picture[:id]) %> <br> by <%= picture[:artist] %></p>
       </li></div>
     <% end %>
