@@ -6,7 +6,7 @@ set :user, "bitmaker"
  
  
 set :scm, :git
-set :repository, "git@github.com:aryazar86/blog_app.git"
+set :repository, "git@github.com:aryazar86/photogur.git"
 set :branch, "master"
 set :use_sudo, true
  
