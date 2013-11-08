@@ -2,9 +2,13 @@
 
 <p align="center"><%= link_to "Add a New Picture?", "/pictures/new" %></p>
 
+<div style="text-align:center">~</div>
+  <br><br>
+<div class="title_screen" style="font-size:20px"> 
+  MOST RECENT POSTS </div>
 <br><br>
   <ul class="ch-grid">
-    <% @pictures.each do |picture| %>
+    <% @most_recent_pictures.each do |picture| %>
         <div class="container"><li>
         <div class="img_container"><%= link_to picture_path(picture[:id]) do %>
           <%= image_tag picture[:url], class: "display_imgs" %>
@@ -13,3 +17,7 @@
       </li></div>
     <% end %>
   </ul>
+
+<% @yesterday_pics.each do |picture| %>
+<%= picture.title %><br>
+<% end %>
